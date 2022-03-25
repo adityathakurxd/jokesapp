@@ -1,16 +1,67 @@
-# jokesapp
+# Jokes Application
+A Flutter app to show a new joke on screen built using a free API.
 
-A new Flutter project.
+## Steps
 
-## Getting Started
+Create a New Flutter Project
 
-This project is a starting point for a Flutter application.
+`flutter create jokesapp`
 
-A few resources to get you started if this is your first Flutter project:
+Modify the default code in `main.dart` as follows:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+```dart
+import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const HomeScreen(),
+    );
+  }
+}
+```
+
+Create a new folder inside `lib` folder called `screens` and add a new file called `home_screen.dart` to it.
+
+```dart
+import 'package:flutter/material.dart';
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            getData(context);
+          },
+          child: Text("Get data"),
+        ),
+      ),
+    );
+  }
+}
+```
+
+The `HomeScreen()` widget would have a simple `ElevatedButton()` in the centre with a text that says, 'Get data'.
+We'll next get the free Jokes API to use.
+
+URL of API: `https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit`
+
+
+
