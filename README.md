@@ -235,8 +235,8 @@ ElevatedButton(
         ),
 ```
 ## Demo
+![Flutter Demo - Google Chrome 3_25_2022 7_14_21 PM](https://user-images.githubusercontent.com/53579386/160133427-b546823c-8e70-47da-bf8d-5f52b26e376b.png)
 
-![Flutter Demo - Google Chrome 3_25_2022 7_14_28 PM](https://user-images.githubusercontent.com/53579386/160133185-ef14569c-0fc6-43d4-978c-d68e82f8755d.png)
 ![Flutter Demo - Google Chrome 3_25_2022 7_14_28 PM](https://user-images.githubusercontent.com/53579386/160133254-259dbe74-5761-4ebf-b054-3f6ce117ed6f.png)
 
 
